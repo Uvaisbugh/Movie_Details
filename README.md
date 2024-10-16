@@ -7,4 +7,4 @@ A simple movie review website built with Django that allows users to browse revi
 
 - **Frontend**: HTML, CSS
 - **Backend**: Django
-- **Database**: PostgreSQL 
+- 
