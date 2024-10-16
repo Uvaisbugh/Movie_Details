@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block body %}
+<form  method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="container">
+            <h1>Add Movie</h1>
+            <span style="color:red">
+                 {% for msg in messages %}
+            {{msg}}
+            {% endfor %}
+            </span>
+            <hr>
+            <label for="Name"><b>Name</b></label>
+            <input type="text" placeholder="Enter Movie name" name="Name" id="Name" required><br>
+            <label for="Year"><b>Release Year</b></label>
+            <input type="text" placeholder="Release Year" name="Year" id="Year" required><br>
+             <label for="Description"><b>Description</b></label>
+            <textarea placeholder="Description" name="Description" id="Description" required></textarea><br>
+            <label for="img"><b>Image</b></label>
+            <input type="file" name="img" id="img"><br>
+            <button class="btn btn-primary btn-lg active" type="submit" >ADD Movie</button>
+        </div>
+
+    </form>
+{% endblock %}
